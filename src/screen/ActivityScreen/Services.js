@@ -2,6 +2,7 @@ import { Menu } from '@mantine/core';
 
 function Services(){
    return (
+    
     <Menu  position="left">
     <Menu.Dropdown >
     <Menu.Item>

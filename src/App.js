@@ -5,10 +5,15 @@ import Home from './screen/HomeScreen/HomeScreen';
 import Edit from './screen/EditScreen/EditScreen';
 import Error from './screen/ErrorScreen/ErrorScreen';
 import Activity from './screen/ActivityScreen';
+import VechicleSaleScreen from './screen/VehicleSaleScreen';
+import VechicleServiceScreen from './screen/VehicleServiceScreen';
+import VechicleInventoryScreen from './screen/VehicleInventoryScreen';
+import SpareInventoryScreen from './screen/SpareInventoryScreen';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginScreen from './screen/LoginScreen/LoginScreen';
 import Topbar from './organs/Topbar';
 import Footer from './organs/Footer';
+
 
 
 
@@ -27,6 +32,10 @@ function App() {
             <Route path="/" element={<LoginScreen />}></Route>
             <Route path="/home" element={<Home/>}></Route>
             <Route path="/activity" element={<Activity/>}></Route>
+            <Route path="/vehicle/sale" element={<VechicleSaleScreen/>}></Route>
+            <Route path="/vehicle/service" element={<VechicleServiceScreen/>}></Route>
+            <Route path="/inventory/vehicle" element={<VechicleInventoryScreen/>}></Route>
+            <Route path="/inventory/spares" element={<SpareInventoryScreen/>}></Route>
             <Route path="/:hash" element={<Edit/> }></Route>
             <Route element={<Error/>}></Route>
             <Route path='/not-found' element={<Error/>}></Route>
