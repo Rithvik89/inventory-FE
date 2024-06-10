@@ -25,17 +25,20 @@ function App() {
           withGlobalStyles
           withNormalizeCSS
         >
+       
+        <BrowserRouter>
         <Topbar/>
         <Footer/>
-        <BrowserRouter>
         <Routes>
             <Route path="/" element={<LoginScreen />}></Route>
             <Route path="/home" element={<Home/>}></Route>
             <Route path="/activity" element={<Activity/>}></Route>
             <Route path="/vehicle/sale" element={<VechicleSaleScreen/>}></Route>
             <Route path="/vehicle/service" element={<VechicleServiceScreen/>}></Route>
-            <Route path="/inventory/vehicle" element={<VechicleInventoryScreen/>}></Route>
             <Route path="/inventory/spares" element={<SpareInventoryScreen/>}></Route>
+            <Route path="/inventory/vehicle" element={<VechicleInventoryScreen/>}></Route>
+            <Route path="/monthly-report" element={<Error/>}></Route>
+            <Route path="/daily-report" element={<Error/>}></Route>
             <Route path="/:hash" element={<Edit/> }></Route>
             <Route element={<Error/>}></Route>
             <Route path='/not-found' element={<Error/>}></Route>
