@@ -2,6 +2,8 @@ import { Button, Container, TextInput,NativeSelect, rem, ActionIcon } from '@man
 import { useState } from 'react'
 import { Minus } from 'react-feather';
 
+//TODO: Fix Delete button.
+
 function SpareInventoryScreen() {
   const [spares,setSpares] = useState([{"name":"Air filter","units":"12","price":"240"}]) 
   const [name,setName] = useState('');
@@ -44,9 +46,6 @@ function SpareInventoryScreen() {
       </div>
 
 
-      <div style={{
-        
-      }}> 
       {  
         spares.map((spare)=>{
             console.log("In Map:",spare)
@@ -66,23 +65,15 @@ function SpareInventoryScreen() {
                     }}
                         value={spare.units}/>
                     <TextInput style={{
-                        width:"20%"
+                        width:"30%"
                     }}
                         value={spare.price}/>
 
-                    <ActionIcon>
-                        <Minus onClick={()=>{
-                           // modify the list.
-                           
-                           console.log("In Minus: ",spares)
-                           setSpares(spares)
-                        }}/>
-                    </ActionIcon>
+                  
                 </div>
             )
         })
       }
-      </div>
 
 
       
@@ -122,6 +113,10 @@ function SpareInventoryScreen() {
             setPrice('')
             setUnits('')
         }}>+ Add Item</Button>
+                
+        <Button style={{
+          margin:"10px"
+        }}>Submit Transaction</Button>
       </Container>
   );
 }

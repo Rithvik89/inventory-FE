@@ -1,6 +1,7 @@
 import { ActionIcon, Modal,Card, Title, useMantineTheme ,Text,Button,Menu} from "@mantine/core";
 import { Plus } from "react-feather";
 import { useDisclosure } from '@mantine/hooks';
+import {Link} from 'react-router-dom'
 import Services from "./Services";
 import { useState } from "react";
 
@@ -38,10 +39,18 @@ function Activity(){
           justifyContent:"space-around",
           alignItems:"center"
         }}>
-          <Button variant="outline">Vehicle service</Button>
-          <Button variant="outline">Vehicle sale</Button>
-          <Button variant="outline">Vehicle Inventory</Button>
-          <Button variant="outline">Spare Inventory</Button>
+          <Link to="/vehicle/service">
+            <Button variant="outline">Vehicle service</Button>
+          </Link>
+          <Link to="/vehicle/sale">
+            <Button variant="outline">Vehicle sale</Button>
+          </Link>
+          <Link to="/inventory/vehicle">
+            <Button variant="outline">Vehicle Inventory</Button>
+          </Link>
+          <Link to="/inventory/spares">
+            <Button variant="outline">Spare Inventory</Button>
+          </Link>
         </div>
         
       </Modal>
