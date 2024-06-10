@@ -1,4 +1,5 @@
 import { Home, User, Activity, Truck,Settings } from "react-feather";
+import { Link } from "react-router-dom";
 
 const isSignedIn =true
 
@@ -22,7 +23,10 @@ function Footer(){
             justifyContent:"space-around",
             width:"100%"
          }}>
-              <Activity size={"20"} />
+
+          <Link to="/activity">
+            <Activity size={"20"} />
+          </Link>
               <Truck size={"20"} />
               <Settings size={"20"}/>
               <User size={"20"} />
