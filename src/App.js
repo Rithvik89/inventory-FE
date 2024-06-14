@@ -13,6 +13,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginScreen from './screen/LoginScreen/LoginScreen';
 import Topbar from './organs/Topbar';
 import Footer from './organs/Footer';
+import VehicleScreen from './screen/VehicleScreen';
+import SparesScreen from './screen/SparesScreen';
 
 
 
@@ -37,8 +39,13 @@ function App() {
             <Route path="/vehicle/service" element={<VechicleServiceScreen/>}></Route>
             <Route path="/inventory/spares" element={<SpareInventoryScreen/>}></Route>
             <Route path="/inventory/vehicle" element={<VechicleInventoryScreen/>}></Route>
+            //TODO: add screens here ...
+            <Route path="/vehicles" element={<VehicleScreen/>}></Route>
+            <Route path="/spares" element={<SparesScreen/>}></Route>
+            <Route path="/profile" element={<Error/>}></Route>
             <Route path="/monthly-report" element={<Error/>}></Route>
             <Route path="/daily-report" element={<Error/>}></Route>
+            <Route psth="/inventory" element={<Error/>}></Route>
             <Route path="/:hash" element={<Edit/> }></Route>
             <Route element={<Error/>}></Route>
             <Route path='/not-found' element={<Error/>}></Route>

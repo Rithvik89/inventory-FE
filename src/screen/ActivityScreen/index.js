@@ -29,6 +29,7 @@ function Activity(){
         activities on and around the fjords of Norway
       </Text>
       </Card>
+      
       <Modal opened={opened} onClose={close} title="Transaction">
         <h3> pick the desired service</h3>
         <div style={{
@@ -41,9 +42,6 @@ function Activity(){
         }}>
           <Link to="/vehicle/service">
             <Button variant="outline">Vehicle service</Button>
-          </Link>
-          <Link to="/vehicle/sale">
-            <Button variant="outline">Vehicle sale</Button>
           </Link>
           <Link to="/inventory/vehicle">
             <Button variant="outline">Vehicle Inventory</Button>

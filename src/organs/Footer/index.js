@@ -27,9 +27,15 @@ function Footer(){
           <Link to="/activity">
             <Activity size={"20"} />
           </Link>
-              <Truck size={"20"} />
-              <Settings size={"20"}/>
-              <User size={"20"} />
+          <Link to="/vehicles">
+             <Truck size={"20"} />
+          </Link>
+          <Link to="/spares">
+            <Settings size={"20"}/>
+          </Link>
+          <Link to="/profile">
+             <User size={"20"} />
+          </Link>
 
             </div>
         </div>

@@ -60,6 +60,22 @@ function LeftPane(props){
             <Components title="Daily Reports" />
         </SMobileBar>
 
+        <SMobileBar onClick={()=>{
+            navigate("/inventory")
+            toggle()
+            
+          }}>
+            <Components title="Total Inventory" />
+        </SMobileBar>
+
+        <SMobileBar onClick={()=>{
+            navigate("/feedback")
+            toggle()
+            
+          }}>
+            <Components title="Developer Feedback" />
+        </SMobileBar>
+
       </SNavBarMobile>
 
     );
