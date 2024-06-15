@@ -1,10 +1,18 @@
 import { Search } from "react-feather";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure } from '@mantine/hooks';
+import { Modal, Button, TextInput } from '@mantine/core';
+import { Link } from 'react-feather';
 import { Burger } from "@mantine/core";
 import LeftPane from "../LeftPane";
 import { useState } from "react";
 
+
+
 const isSignedIn =true
+
+
+
+
 
 
 // TODO: Close the leftpane after clicking ....
@@ -12,6 +20,7 @@ const isSignedIn =true
 function Topbar(){
 
   const [opened, setOpened] = useState(false);
+  const [modalopened,{open,close}] = useDisclosure(false)
 
     return (
       <>
@@ -48,6 +57,22 @@ function Topbar(){
             }} opened={opened} onClick={()=>setOpened(!opened)} aria-label="Toggle navigation"
         />
 
+        <Modal opened={modalopened} onClose={close} title="Seach Customer">
+            <div style={{
+            height:"100px",
+            width:"100%",
+            display:"flex",
+           
+            justifyContent:"space-around",
+            alignItems:"center"
+            }}>
+               <TextInput placeholder="9890878832" label="Type Here"/>
+               <Button style={{
+                marginTop:"15px"
+               }}>Search</Button>
+            </div>
+            </Modal>
+
 
         <Search
             style={{
@@ -55,7 +80,7 @@ function Topbar(){
             top: "20px",
             right: "13px",
             color: "black"
-            }}
+            }} onClick={open}
         /></>:<></>
         }
        </div>
