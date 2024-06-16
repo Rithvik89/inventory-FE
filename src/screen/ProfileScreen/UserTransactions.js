@@ -1,5 +1,4 @@
 import { Tabs, rem ,TextInput,Button} from '@mantine/core';
-import { IconPhoto, IconMessageCircle, IconSettings } from '@tabler/icons-react';
 import {Settings,Logout} from './Subsection';
 
 
