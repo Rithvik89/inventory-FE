@@ -17,6 +17,7 @@ import SparesScreen from './screen/SparesScreen';
 import DailyReport from './screen/ReportsScreen/DailyReport';
 import ProfileScreen from './screen/ProfileScreen';
 import MonthlyReport from './screen/ReportsScreen/MonthlyReport';
+import VehicleListScreen from './screen/VehicleListScreen'
 
 
 
@@ -41,7 +42,7 @@ function App() {
             <Route path="/vehicle/service" element={<VechicleServiceScreen/>}></Route>
             <Route path="/inventory/spares" element={<SpareInventoryScreen/>}></Route>
             <Route path="/inventory/vehicle" element={<VechicleInventoryScreen/>}></Route>
-            
+            <Route path="/vehicleScreen" element={<VehicleListScreen/>}></Route>
             //TODO: add screens here ...
             <Route path="/vehicles" element={<VehicleScreen/>}></Route>
             <Route path="/spares" element={<SparesScreen/>}></Route>
