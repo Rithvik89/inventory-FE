@@ -1,5 +1,5 @@
 //import { ActionIcon, Modal,Card, Title, useMantineTheme ,Text,Button,Menu} from "@mantine/core";
-import { Card, Image, Text, Badge, Button, Group, Modal } from '@mantine/core';
+import { Card, Image, Text, Badge, Button, Group, Modal, Grid, Col } from '@mantine/core';
 import { Plus } from "react-feather";
 import { useDisclosure } from '@mantine/hooks';
 import {Link} from 'react-router-dom'
@@ -226,21 +226,10 @@ let service_data = [
 
 
 
+
 function Activity(){
 console.log("abd")
   const [opened, { open, close }] = useDisclosure(false);
-
-  const controlsStyles = {
-    transition: 'opacity 150ms ease',
-    opacity: 0,
-  };
-
-  const rootStyles = {
-    '&:hover .controls': {
-      opacity: 1,
-    },
-  };
-
     return (
     <div 
     style={{
@@ -252,9 +241,20 @@ console.log("abd")
       flexDirection: "column"
     }}>
       
+
+      
+      
+
+      
+      
+      
+
+
+
+
+
+
     {service_data.map((elem,key_1) => {
-      // console.log(elem.name)
-      // console.log(elem.service_type)
       if(elem.service_id == 1){
       const totalCost = elem.services.reduce((cnt, service) => cnt + service.cost, 0);
       return <Card shadow="sm" padding="lg" radius="md" withBorder style={{marginBottom:'20px'}}>
@@ -270,7 +270,7 @@ console.log("abd")
             left: '50%',
             transform: 'translateX(-50%)',
             borderBottom: '2px solid #eee',
-            width: '80%',  
+            width: '80%',   
           }}
         ></div>
       </div>
